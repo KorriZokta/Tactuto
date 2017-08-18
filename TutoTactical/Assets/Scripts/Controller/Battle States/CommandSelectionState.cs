@@ -3,7 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CommandSelectionState : BaseAbilityMenuState {
+public class CommandSelectionState : BaseAbilityMenuState
+{
     protected override void LoadMenu()
     {
         if (menuOptions == null)

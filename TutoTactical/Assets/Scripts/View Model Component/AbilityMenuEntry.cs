@@ -35,12 +35,12 @@ public class AbilityMenuEntry : MonoBehaviour {
             if (value)
                 State |= States.Locked;
             else
-                State &= ~States.Selected;
+                State &= ~States.Locked;
         }
     }
     public bool IsSelected
     {
-        get { return (State & States.Selected) != States.Locked; }
+        get { return (State & States.Selected) != States.None; }
         set
         {
             if (value)
@@ -51,7 +51,7 @@ public class AbilityMenuEntry : MonoBehaviour {
     }
     States State
     {
-        get { return State; }
+        get { return state; }
         set
         {
             if (state == value)

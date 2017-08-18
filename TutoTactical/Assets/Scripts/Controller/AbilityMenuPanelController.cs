@@ -60,7 +60,7 @@ public class AbilityMenuPanelController : MonoBehaviour {
             menuEntries[selection].IsSelected = false;
         selection = value;
         //Select the new entry
-        if (selection <= 0 && selection < menuEntries.Count)
+        if (selection >= 0 && selection < menuEntries.Count)
             menuEntries[selection].IsSelected = true;
         return true;
     }
