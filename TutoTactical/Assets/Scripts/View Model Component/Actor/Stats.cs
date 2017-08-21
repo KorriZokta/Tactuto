@@ -17,7 +17,7 @@ public class Stats : MonoBehaviour {
     }
     public static string DidChangeNotification(StatTypes type)
     {
-        if (_didChangeNotifications.ContainsKey(type))
+        if (!_didChangeNotifications.ContainsKey(type))
             _didChangeNotifications.Add(type, string.Format("Stats.{0}DidChange", type.ToString()));
         return _didChangeNotifications[type];
     }
